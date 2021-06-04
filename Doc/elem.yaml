@@ -1,0 +1,48 @@
+# 这是登录页的注释
+desc: "登录页面元素操作对象"
+parameters:
+  - elem_name: "Login"
+    desc: "登录按钮"
+    data: {
+      method: "ACCESSIBILITY_ID",
+      value: "Login"
+    }
+  - elem_name: "Log in with Google"
+    desc: "谷歌登录"
+    data: {
+      method: "ACCESSIBILITY_ID",
+      value: "Log in with Google"
+    }
+  - elem_name: "Profile_btn"
+    desc: "Profile按钮"
+    data: {
+      method: "ACCESSIBILITY_ID",
+      value: "Profile\nTab 4 of 4"
+    }
+  - elem_name: "user_list"
+    desc: "user列表"
+    data: {
+      method: "XPATH",
+      value: "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.LinearLayout"
+    }
+
+  - elem_name: "email"
+    desc: "email输入框"
+    data: {
+      method: "XPATH",
+      value: "//android.view.View[@content-desc=\"No account yet? \"]/android.widget.EditText[1]"
+    }
+
+  - elem_name: "password"
+    desc: "password输入框"
+    data: {
+      method: "XPATH",
+      value: "//android.view.View[@content-desc=\"No account yet? \"]/android.widget.EditText[2]"
+    }
+
+  - elem_name: "Logout"
+    desc: "logout"
+    data: {
+      method: "ACCESSIBILITY_ID",
+      value: "Logout"
+    }
