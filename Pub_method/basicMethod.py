@@ -34,6 +34,7 @@ class PubMethod:
         :param file:
         :return:
         '''
+        # 读取yaml文档
         if os.path.isfile(file):
             fr = open(file, 'r', encoding='utf-8')
             yaml_info = yaml.safe_load(fr)
@@ -43,8 +44,10 @@ class PubMethod:
             logging.error(file, "文件不存在")
             sys.exit()
 
+    # key_event方法，为了实现向输入框中填写内容
     @staticmethod
     def key_event(key: str):
+        # 定义个空列表，然后for循环，遍历传入的参数key，将key中的值，解析为对应的key_code值，以便调用
         account = []
         for i in key:
             for j in key_code.keys():

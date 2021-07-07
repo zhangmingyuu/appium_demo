@@ -28,7 +28,6 @@ class ElemAnalysis:
     # 在调用ElemAnalysis类时，由于该方法写在了__init__中，会先调用该方法。
     # 该方法是读取yaml文件中的内容，然后将元素的各个字段信息取出来，分别放到ElemAnalysis的类变量中
     def __run(self, root_dir_name, file_name):
-        # config_dir_name = os.path.join(root_dir_name, dir_name)
         file_path = os.path.abspath(os.path.join(root_dir_name, file_name))
         try:
             self.info = PubMethod().read_yaml(file_path)['parameters']

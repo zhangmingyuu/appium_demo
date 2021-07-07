@@ -9,14 +9,19 @@ from Pub_method.findElem import FindElem
 from Pub_method.read_yaml import ActivityElem
 
 
+# 继承FindElem，并且重写了FindElem
 class ElemActivity(FindElem):
     def __init__(self, driver):
         self.driver = driver
+        # __init__中直接调用ActivityElem方法，生成一个ActivityElem的对象
         self.elem_locator = ActivityElem()
         super().__init__(driver)
 
+    # 重新封装了click方法
     def click_btn(self, value):
+        # 先获取元素的信息
         elem = self.elem_locator.get_locator(value)
+        # 再调用父类的点击元素的方法
         super().click(elem)
 
     def send_keys(self, locator, value):

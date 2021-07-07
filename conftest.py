@@ -20,6 +20,7 @@ def func_driver(request):
         "unicodeKeyboard": True,
         "resetKeyboard": True
     }
+    # 创建driver对象
     driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desir_caps)
     yield driver
     driver.quit()

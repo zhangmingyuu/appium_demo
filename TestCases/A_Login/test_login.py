@@ -20,17 +20,28 @@ class TestLoginCase:
         "https://docs.google.com/spreadsheets/d/1fd17dRiONc1bH6ATxumd11MJ9wogiG1uVuOo5QZfxtY/edit#gid=1802451175",
         name="测试用例位置")
     @allure.title("谷歌账号登录")
+    # 将login_option和func_driver全部作为参数返回
     def test_login_success_google(self, login_option, func_driver):
         time.sleep(3)
+        # 测试步骤
         login_option.click_btn("Login")
         func_driver.implicitly_wait(10)
         login_option.click_btn("Log in with Google")
         func_driver.implicitly_wait(10)
         login_option.click_btn("user_list")
         func_driver.implicitly_wait(10)
-        login_option.check_exist("xxxxxxxxxx")
+        # 断言
+        assert login_option.check_exist("Profile_btn")
 
-        # 验证完毕后，需要退出登录，以便执行另一个case
+    # 使用账号密码登录
+    @allure.story("user login")
+    @allure.description("用户使用邮箱账号登录")
+    @allure.testcase(
+        "https://docs.google.com/spreadsheets/d/1fd17dRiONc1bH6ATxumd11MJ9wogiG1uVuOo5QZfxtY/edit#gid=1802451175",
+        name="测试用例位置")
+    @allure.title("邮箱账号登录")
+    def test_login_success_email(self, login_option, func_driver):
+        # 上个case完成后，需要先退出登录
         login_option.click_btn("Profile_btn")
         time.sleep(1)
         TouchAction(func_driver).press(x=657, y=1452).move_to(x=652, y=1177).release().perform()
@@ -41,14 +52,6 @@ class TestLoginCase:
         func_driver.implicitly_wait(10)
         login_option.click_btn("Logout")
 
-    # 使用账号密码登录
-    @allure.story("user login")
-    @allure.description("用户使用邮箱账号登录")
-    @allure.testcase(
-        "https://docs.google.com/spreadsheets/d/1fd17dRiONc1bH6ATxumd11MJ9wogiG1uVuOo5QZfxtY/edit#gid=1802451175",
-        name="测试用例位置")
-    @allure.title("邮箱账号登录")
-    def test_login_success_email(self, login_option, func_driver):
         func_driver.implicitly_wait(10)
         login_option.click_btn("Login")
 
