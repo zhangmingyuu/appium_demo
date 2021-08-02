@@ -17,6 +17,16 @@ class ElemActivity(FindElem):
         self.elem_locator = ActivityElem()
         super().__init__(driver)
 
+    # 重新封装查找元素的方法
+    # def find_element(self, value):
+    #     try:
+    #         # 获取元素的信息
+    #         elem = self.elem_locator.get_locator(value)
+    #         return elem
+    #     except Exception as e:
+    #         logging.error("没有定位到元素")
+    #         return False
+
     # 重新封装了click方法
     def click_btn(self, value):
         # 先获取元素的信息
@@ -24,16 +34,13 @@ class ElemActivity(FindElem):
         # 再调用父类的点击元素的方法
         super().click(elem)
 
+    # 普通的send_keys方法
     def send_keys(self, locator, value):
         elem = self.find_element(locator)
         try:
             elem.senk_keys(value)
         except Exception as e:
             logging.error("send_keys失败，错误信息为{}".format(e))
-
-    def check_exist(self, value):
-        elem = self.elem_locator.get_locator(value)
-        super().check_existence(elem)
 
     def send_key(self, value):
         key = super().key_event(value)
