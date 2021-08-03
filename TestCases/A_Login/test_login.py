@@ -19,7 +19,7 @@ class TestLoginCase:
         "https://docs.google.com/spreadsheets/d/1fd17dRiONc1bH6ATxumd11MJ9wogiG1uVuOo5QZfxtY/edit#gid=1802451175",
         name="测试用例位置")
     @allure.title("谷歌账号登录")
-    # 将login_option和func_driver全部作为参数返回
+    # 将login_option和func_driver全部作为参数传入
     def test_login_success_google(self, login_option, func_driver):
         # 临时加上的，关闭弹出更新app的弹窗
         func_driver.implicitly_wait(10)
@@ -70,3 +70,6 @@ class TestLoginCase:
         # 点击登录按钮
         login_option.click_btn("Login")
         func_driver.implicitly_wait(10)
+
+        # 断言
+        AssertMethod.assert_elem_exist(func_driver, login_option.elem_enable("Profile_btn"))

@@ -32,11 +32,11 @@ class ElemActivity(FindElem):
         except Exception as e:
             logging.error("send_keys失败，错误信息为{}".format(e))
 
-
     # 元素是否可以获取到的验证方法
     def elem_enable(self, value):
         # 获取到这个元素
-        elem = self.find_element(value)
+        e_value = self.elem_locator.get_locator(value)
+        elem = self.find_element(e_value)
 
         # 验证这个元素是否存在
         try:

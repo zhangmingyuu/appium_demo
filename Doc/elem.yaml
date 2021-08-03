@@ -46,3 +46,17 @@ parameters:
       method: "ACCESSIBILITY_ID",
       value: "Logout"
     }
+
+  - elem_name: "Join_project"
+    desc: "join project button"
+    data: {
+      method: "ACCESSIBILITY_ID",
+      value: "+ Join Project"
+    }
+
+  - elem_name: "look_for_project"
+    desc: "look for project button"
+    data: {
+      method: "ACCESSIBILITY_ID",
+      value: "Look for project"
+    }

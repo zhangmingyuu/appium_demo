@@ -99,7 +99,6 @@ class FindElem:
 
     def Android_send_keys(self, keys):
         inputs = self.key_event(keys)
-        print(inputs)
         for i in inputs:
             if isinstance(i, int):
                 self.driver.press_keycode(keycode=i)
