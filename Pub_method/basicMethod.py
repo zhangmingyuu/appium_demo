@@ -56,3 +56,5 @@ class PubMethod:
             logging.error("截图失败，错误信息：{}".format(e))
         finally:
             return picture_url
+
+

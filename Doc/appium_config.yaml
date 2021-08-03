@@ -1,0 +1,8 @@
+appium_config:
+  "platformName": "Android"
+  "deviceName": "Redmi"
+  "platformVersion": "9.0"
+  "appPackage": "com.qraved.app"
+  "appActivity": "com.imaginato.qravedconsumer.activity.StartActivity"
+  "unicodeKeyboard": True
+  "resetKeyboard": True
