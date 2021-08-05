@@ -17,7 +17,7 @@ config_path = os.path.join(root_dir, "Doc")
 config_path = os.path.abspath(config_path)
 
 
-class ElemAnalysis:
+class ElemAnalysis(object):
     def __init__(self, file_name, root_dir_name=config_path):
         self.elem_name = []
         self.desc = []

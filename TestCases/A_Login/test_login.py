@@ -22,22 +22,15 @@ class TestLoginCase:
     # 将login_option和func_driver全部作为参数传入
     def test_login_success_google(self, login_option, func_driver):
         # 临时加上的，关闭弹出更新app的弹窗
-        # func_driver.implicitly_wait(10)
-        # el1 = func_driver.find_element_by_accessibility_id("Later")
-        # el1.click()
-        # 测试步骤
-        # func_driver.implicitly_wait(10)
-        # login_option.click_btn("login_btn")
-        # func_driver.implicitly_wait(10)
-        # login_option.click_btn("Log in with Google")
-        # func_driver.implicitly_wait(10)
-        # login_option.click_btn("user_list")
-        # func_driver.implicitly_wait(10)
-        # # 断言跳转到下个界面后，是否存在某个button
-        # AssertMethod.assert_elem_exist(func_driver,login_option.elem_enable("Profile_btn"))
-
         func_driver.implicitly_wait(10)
+        el1 = func_driver.find_element_by_accessibility_id("Later")
+        el1.click()
+        # 测试步骤,点击登录按钮，然后使用谷歌账号的方式，然后在列表中找到某个用户登录
         login_option.click_btn("login_btn")
+        login_option.click_btn("Log in with Google")
+        login_option.click_btn("user_list")
+        # 断言跳转到下个界面后，是否存在某个button
+        AssertMethod.assert_elem_exist(func_driver,login_option.elem_enable("Profile_btn"))
 
 
     # 使用账号密码登录
