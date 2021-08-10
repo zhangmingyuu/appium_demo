@@ -5,7 +5,7 @@ author: Taylor
 '''
 
 import pytest
-from ActivityObject.ElemActivity import ElemActivity
+from page_object.elem_activity import ElemActivity
 
 
 @pytest.fixture(scope="module")

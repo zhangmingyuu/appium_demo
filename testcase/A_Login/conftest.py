@@ -5,7 +5,7 @@ author: Taylor
 '''
 
 import pytest
-from ActivityObject.ElemActivity import ElemActivity
+from page_object.elem_activity import ElemActivity
 
 
 # 调用ElemActivity，将最外层生成的driver对象传给ElemActivity，并生成一个ElemActivity对象，并将这个对象作为返回值

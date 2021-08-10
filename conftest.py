@@ -7,7 +7,7 @@ author: Taylor
 import os
 import pytest
 from appium import webdriver
-from Pub_method import basicMethod as read
+from pub_method import pub_method as read
 
 # 获取appium_config中的内容
 appium_config_path = os.path.join(os.path.dirname(__file__), "Doc", "appium_config.yaml")

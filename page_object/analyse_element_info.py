@@ -6,12 +6,12 @@ author: Taylor
 import os
 import logging
 from selenium.webdriver.common.by import By
-from Base.base import BaseBy
-from Pub_method.basicMethod import PubMethod
+from pub_method.base import BaseBy
+from pub_method.pub_method import PubMethod
 
 # 将当前文件的目录读取出来
 root_dir = os.path.dirname(os.path.dirname(__file__))
-# 将root_dir中获取的路径和“ActivityObject”组合为一个新路径
+# 将root_dir中获取的路径和“page_object”组合为一个新路径
 config_path = os.path.join(root_dir, "Doc")
 # 返回config_path的绝对路径
 config_path = os.path.abspath(config_path)
@@ -42,7 +42,6 @@ class ElemAnalysis(object):
     def get_locator(self, elem_name):
         '''
             当拿到元素的内容，并且初始化之后，要对元素进行定位，get_locator用来
-
         :param elem_name: 传入自定义元素的名称，也就是你想定位的那个元素的名称
         :return:
         '''
@@ -72,7 +71,6 @@ class ElemAnalysis(object):
 class ActivityElem(ElemAnalysis):
     def __init__(self):
         super().__init__("elem.yaml")
-
 
 
 if __name__ == "__main__":

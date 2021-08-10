@@ -2,7 +2,7 @@ appium_config:
   "platformName": "Android"
   "deviceName": "Redmi"
   "platformVersion": "9.0"
-  "appPackage": "com.qraved.app"
-  "appActivity": "com.imaginato.qravedconsumer.activity.StartActivity"
+  "appPackage": "im.artemis.fawn.staging"
+  "appActivity": "im.artemis.fawn.MainActivity"
   "unicodeKeyboard": True
   "resetKeyboard": True
