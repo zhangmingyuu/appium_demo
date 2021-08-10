@@ -2,7 +2,7 @@ appium_config:
   "platformName": "Android"
   "deviceName": "Redmi"
   "platformVersion": "9.0"
-  "appPackage": "im.artemis.fawn.staging"
-  "appActivity": "im.artemis.fawn.MainActivity"
+  "appPackage": 被测的软件
+  "appActivity": 被测的软件
   "unicodeKeyboard": True
   "resetKeyboard": True

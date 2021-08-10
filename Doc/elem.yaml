@@ -60,10 +60,3 @@ parameters:
       method: "ACCESSIBILITY_ID",
       value: "Look for project"
     }
-
-  - elem_name: "login_btn"
-    desc: "Qraved的login按钮"
-    data: {
-      method: "ID",
-      value: "com.qraved.app:id/tvLogin"
-    }
