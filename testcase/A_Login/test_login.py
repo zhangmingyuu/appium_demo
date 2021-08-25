@@ -14,9 +14,6 @@ class TestLoginCase:
     # 使用谷歌账号登录
     @allure.story("user login")
     @allure.description("用户使用谷歌账号登录")
-    @allure.testcase(
-        "https://docs.google.com/spreadsheets/d/1fd17dRiONc1bH6ATxumd11MJ9wogiG1uVuOo5QZfxtY/edit#gid=1802451175",
-        name="测试用例位置")
     @allure.title("谷歌账号登录")
     # 将login_option和func_driver全部作为参数传入
     def test_login_success_google(self, login_option, func_driver):
@@ -35,9 +32,6 @@ class TestLoginCase:
     # 使用账号密码登录
     @allure.story("user login")
     @allure.description("用户使用邮箱账号登录")
-    @allure.testcase(
-        "https://docs.google.com/spreadsheets/d/1fd17dRiONc1bH6ATxumd11MJ9wogiG1uVuOo5QZfxtY/edit#gid=1802451175",
-        name="测试用例位置")
     @allure.title("邮箱账号登录")
     def test_login_success_email(self, login_option, func_driver):
         # 上个case完成后，需要先退出登录
@@ -45,7 +39,6 @@ class TestLoginCase:
         # 滑动屏幕，拖到下面找到logout按钮
         time.sleep(1)
         login_option.swipe_screen(657, 1452, 652, 1177)
-        # TouchAction(func_driver).press(x=657, y=1452).move_to(x=652, y=1177).release().perform()
         # 点击profile的logout
         login_option.click_btn("Logout")
         # 点击pop up的logout
